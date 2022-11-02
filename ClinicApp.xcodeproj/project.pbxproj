@@ -10,6 +10,12 @@
 		183A9EA828A3FA0B0041B30A /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A9EA728A3FA0B0041B30A /* LoadingScreen.swift */; };
 		183A9EAE28A430570041B30A /* BadgeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A9EAD28A430570041B30A /* BadgeController.swift */; };
 		183A9EB028A435240041B30A /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183A9EAF28A435240041B30A /* MainScreen.swift */; };
+		1857C56128FE177A00A5CAF5 /* ClinicApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1857C55F28FE177A00A5CAF5 /* ClinicApp.xcdatamodeld */; };
+		1857C58828FF295700A5CAF5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857C58728FF295700A5CAF5 /* Persistence.swift */; };
+		1857C5A928FF412300A5CAF5 /* DataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1857C5A828FF412300A5CAF5 /* DataView.swift */; };
+		18ADAC0828F7806A00D006D4 /* SideMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADAC0728F7806A00D006D4 /* SideMenuView.swift */; };
+		18ADAC0A28F8925700D006D4 /* csvController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18ADAC0928F8925700D006D4 /* csvController.swift */; };
+		18B31FF629071E06001BFA92 /* DeleteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B31FF529071E06001BFA92 /* DeleteView.swift */; };
 		18DF57C1286E1DEB007B332A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF57C0286E1DEB007B332A /* AppDelegate.swift */; };
 		18DF57C3286E1DEB007B332A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF57C2286E1DEB007B332A /* SceneDelegate.swift */; };
 		18DF57C5286E1DEB007B332A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18DF57C4286E1DEB007B332A /* ViewController.swift */; };
@@ -22,6 +28,12 @@
 		183A9EA728A3FA0B0041B30A /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		183A9EAD28A430570041B30A /* BadgeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeController.swift; sourceTree = "<group>"; };
 		183A9EAF28A435240041B30A /* MainScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		1857C56028FE177A00A5CAF5 /* ClinicApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ClinicApp.xcdatamodel; sourceTree = "<group>"; };
+		1857C58728FF295700A5CAF5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		1857C5A828FF412300A5CAF5 /* DataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataView.swift; sourceTree = "<group>"; };
+		18ADAC0728F7806A00D006D4 /* SideMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuView.swift; sourceTree = "<group>"; };
+		18ADAC0928F8925700D006D4 /* csvController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = csvController.swift; sourceTree = "<group>"; };
+		18B31FF529071E06001BFA92 /* DeleteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteView.swift; sourceTree = "<group>"; };
 		18DF57BD286E1DEB007B332A /* ClinicApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ClinicApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18DF57C0286E1DEB007B332A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		18DF57C2286E1DEB007B332A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,10 +75,16 @@
 			isa = PBXGroup;
 			children = (
 				18DF57C0286E1DEB007B332A /* AppDelegate.swift */,
+				1857C55F28FE177A00A5CAF5 /* ClinicApp.xcdatamodeld */,
 				18DF57C2286E1DEB007B332A /* SceneDelegate.swift */,
 				18DF57C4286E1DEB007B332A /* ViewController.swift */,
 				183A9EA728A3FA0B0041B30A /* LoadingScreen.swift */,
 				183A9EAF28A435240041B30A /* MainScreen.swift */,
+				1857C58728FF295700A5CAF5 /* Persistence.swift */,
+				18ADAC0928F8925700D006D4 /* csvController.swift */,
+				18ADAC0728F7806A00D006D4 /* SideMenuView.swift */,
+				1857C5A828FF412300A5CAF5 /* DataView.swift */,
+				18B31FF529071E06001BFA92 /* DeleteView.swift */,
 				18DF57C6286E1DEB007B332A /* Main.storyboard */,
 				183A9EAD28A430570041B30A /* BadgeController.swift */,
 				18DF57C9286E1DED007B332A /* Assets.xcassets */,
@@ -149,10 +167,16 @@
 			files = (
 				183A9EB028A435240041B30A /* MainScreen.swift in Sources */,
 				183A9EAE28A430570041B30A /* BadgeController.swift in Sources */,
+				18B31FF629071E06001BFA92 /* DeleteView.swift in Sources */,
 				183A9EA828A3FA0B0041B30A /* LoadingScreen.swift in Sources */,
+				18ADAC0828F7806A00D006D4 /* SideMenuView.swift in Sources */,
 				18DF57C5286E1DEB007B332A /* ViewController.swift in Sources */,
 				18DF57C1286E1DEB007B332A /* AppDelegate.swift in Sources */,
+				18ADAC0A28F8925700D006D4 /* csvController.swift in Sources */,
+				1857C56128FE177A00A5CAF5 /* ClinicApp.xcdatamodeld in Sources */,
+				1857C5A928FF412300A5CAF5 /* DataView.swift in Sources */,
 				18DF57C3286E1DEB007B332A /* SceneDelegate.swift in Sources */,
+				1857C58828FF295700A5CAF5 /* Persistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +394,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1857C55F28FE177A00A5CAF5 /* ClinicApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1857C56028FE177A00A5CAF5 /* ClinicApp.xcdatamodel */,
+			);
+			currentVersion = 1857C56028FE177A00A5CAF5 /* ClinicApp.xcdatamodel */;
+			path = ClinicApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 18DF57B5286E1DEB007B332A /* Project object */;
 }

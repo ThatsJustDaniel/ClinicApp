@@ -30,7 +30,8 @@ struct PulsatingView: View {
                         .multilineTextAlignment(.center)
                         )
         }.onAppear {
-            self.animate.toggle()
+//            self.animate.toggle()
+            self.animate = true
         }
         .animation(Animation.linear(duration: 1.5).repeatForever(autoreverses: true))
     }

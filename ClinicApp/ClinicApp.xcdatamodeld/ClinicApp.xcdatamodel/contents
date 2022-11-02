@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21279" systemVersion="21G115" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Clinic" representedClassName=".Clinic" syncable="YES" codeGenerationType="class">
+        <attribute name="covidTest" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="day" optional="YES" attributeType="String"/>
+        <attribute name="employeeID" optional="YES" attributeType="String"/>
+        <attribute name="otcMeds" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="personalIllness" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="time" optional="YES" attributeType="String"/>
+    </entity>
+</model>
