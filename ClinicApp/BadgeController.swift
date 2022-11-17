@@ -17,14 +17,21 @@ class BadgeController: UIViewController {
 
         // Do any additional setup after loading the view.
         setTimer()
+         
+        
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        print("view is here again! ")
+    }
+    
+    var goToView = false
     
     var keyInput = "" {
         didSet {
             
             print("Your Key Input is now \(keyInput)")
-            
+                     
             
         }
     }
@@ -40,33 +47,94 @@ class BadgeController: UIViewController {
     override func pressesBegan(_ presses: Set<UIPress>, with event: UIPressesEvent?) {
         guard let key = presses.first?.key else { return }
         
+        
         print("your key input count is \(keyInput.count)")
-       
+        
+        if self.goToView == true {
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(500)) {
+                
+                print("1/2 second has passed and the keyInput count is \(self.keyInput.count)")
+                
+                print("lets go the view controller")
+    //            let vc = UIHostingController(rootView: MainScreen(keyInput: keyInput))
+                
+                
+                let vc = UIHostingController(rootView: MainScreen(keyInput: self.keyInput).environment(\.managedObjectContext, self.persistenceController.container.viewContext))
+                
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+                
+                self.goToView = false
+                
+                
+                self.keyInput = ""
+    //            keyInput.append(contentsOf: key.characters)
+                
+            }
+            
+        }
         
         if keyInput.count == 0 {
             keyInput.append(contentsOf: key.characters)
-        } else if keyInput.count == 6 {
-            
-            print("lets go the view controller")
-//            let vc = UIHostingController(rootView: MainScreen(keyInput: keyInput))
-            
-            
-            let vc = UIHostingController(rootView: MainScreen(keyInput: keyInput).environment(\.managedObjectContext, persistenceController.container.viewContext))
-            
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true)
-            
-            
-            
-            
-            keyInput = ""
-//            keyInput.append(contentsOf: key.characters)
-            
-            
+            self.goToView = true
             
         } else {
             keyInput.append(contentsOf: key.characters)
+            goToView = false
         }
+        
+        
+        
+//        DispatchQueue.main.asyncAfter(deadline: .now() + .milliseconds(300)) {
+//            print("async after 300 milliseconds")
+//
+//            if self.goToView == true {
+//
+//                print("lets go the view controller")
+//    //            let vc = UIHostingController(rootView: MainScreen(keyInput: keyInput))
+//
+//
+//                let vc = UIHostingController(rootView: MainScreen(keyInput: self.keyInput).environment(\.managedObjectContext, self.persistenceController.container.viewContext))
+//
+//                vc.modalPresentationStyle = .fullScreen
+//                self.present(vc, animated: true)
+//
+//
+//
+//
+//                self.keyInput = ""
+//    //            keyInput.append(contentsOf: key.characters)
+//
+//
+//            }
+//        }
+       
+        
+        
+//        else if keyInput.count == 10  {
+//
+//
+//            print("lets go the view controller")
+////            let vc = UIHostingController(rootView: MainScreen(keyInput: keyInput))
+//
+//
+//            let vc = UIHostingController(rootView: MainScreen(keyInput: keyInput).environment(\.managedObjectContext, persistenceController.container.viewContext))
+//
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true)
+//
+//            goToView = false
+//
+//
+//            keyInput = ""
+////            keyInput.append(contentsOf: key.characters)
+//
+//
+//
+//        }
+        
+        
 
 
     }
